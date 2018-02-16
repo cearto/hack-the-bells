@@ -1,0 +1,344 @@
+<head>
+	<link rel="stylesheet" type="text/css" href="css/semantic/dist/semantic.min.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.1.1.min.js"
+	  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	  crossorigin="anonymous"></script>
+	<script src="css/semantic/dist/semantic.min.js"></script>
+</head>
+
+
+<style> 
+html{
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+body{
+	font-size: 14pt;
+    /*background-color: #2a3e51;*/
+    background-color: #f2f2f2;
+    background-image: url('/public/artwork/backdrop.png');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% auto;*/
+}
+h2{
+	width: 100% !important;
+}
+	#cushion{
+		height: 100px;
+		width: 100%;
+	}
+	#post-cushion{
+		height: 0px;
+		width: 100%;
+	}
+	#contest-details{
+		color: rgb(235, 235, 235) !important;
+	    background: #2a3e51 !important;
+	    margin-top: 550px;
+	    padding-top: 60px;
+	    padding-bottom: 60px;
+	}
+	#bg, #fg{
+	    width: 120%;
+	    height: 1200px;
+	    position: absolute;
+	    top: -200px;
+	    left: -100px;
+	    margin-bottom: -200px;
+	    overflow: hidden;
+	    z-index: -3!important;
+	    min-height: 1800px;
+	}
+	#fg{ z-index: -1!important;}
+
+	#birds{
+	    position: relative;
+	    left: -350px;
+	    top: -100px;
+	    z-index: -2;
+	}
+	audio{
+	    position: relative;
+	    top: 100px;
+	    width: 100%;
+	}
+
+</style>
+<script>
+    $(function(){
+    	artworkshift();
+    });
+
+    $(window).resize(function(){
+        artworkshift();
+    });
+
+    function artworkshift(){
+        if($(window).width() < 600){
+            $('body').css('background-position', '0 250px');
+            $("#contest-details").css('margin-top', 150);
+
+        }
+        else{
+            $('.top-buffer').height(0);
+            $("#contest-details").css('margin-top', 550);
+            $('body').css('background-position', '0 0');
+        }
+    }
+</script>
+
+
+
+
+<body>
+	<!-- HEADER -->
+	<div class="ui large top fixed hidden menu">
+	  <div class="ui container">
+	    <a class="active item">Home</a>
+	    <a class="item">About Carillons</a>
+	    <a class="item">Sample Library</a>
+	    <a class="item">Jurors</a>
+	    <a class="item">Contact</a>
+	    <a class="item">Sponsors</a>
+	  </div>
+	</div>
+	<div id="cushion"></div>
+	<div class="ui container grid">
+		<div class="centered">
+		        <p>The Berkeley Center for New Media Presents ...</p>
+		        <h1 id="logo">Hack the Bells</h1>
+		</div>
+	</div>
+	<div id="post-cushion"></div>
+	<div class="ui container grid two columns stackable inverted">
+	    <div class="column">
+        	<p class="tagline">Hack the Bells is the world's first remix competition for carillon. This project is an exploration in sound, vision, and performance that asks artists and new media visionaries to use the bells as they see fit - <em> to hack the bells. </em> 
+        	</p>
+	    </div>
+        <div class="column center aligned container">
+           	<a class="ui button massive blue"> 
+           		<i class="icon trophy"></i>
+            	Contest Winners Announced! 
+         	</a>
+         	<br>
+         	<br>
+         	<a class="twitter-timeline" href="https://twitter.com/hashtag/hackthebells" data-widget-id="505465791500660736">#hackthebells Tweets</a>
+		        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    </div>
+	<!-- 
+	            <div class="grid_5 omega">
+	                <audio autoplay="" controls=""><source src=
+	                "/Andrew_Ly-Fanfare.mp3" type="audio/mpeg"></audio>
+	            </div> -->
+	<!-- <object data="/public/artwork/fg.svg" id="fg" type="image/svg+xml"></object>  -->
+	<!-- <object data="/public/artwork/bg.svg" id="bg" type="image/svg+xml"></object>	 -->
+	<div id="contest-details">
+	    <div class="ui middle aligned stackable grid container ">
+	    	
+
+
+	    	<div class="ui row">
+			    <h2 class="ui header inverted">The Contest</h2>
+
+			    <p>
+			        This project encourages artists, musicians, performers, and other visionaries to use the Campanile and/or the openly licensed Campanile audio and images from our <a href='open'>library</a> in their creative work. 
+			    </p>
+			    <p>
+			        Works will be submitted to and reviewed by a jury of international artists, new media innovators, cultural curators, and academics. They will select a winner, who will be awarded a prize of $700 USD and an opportunity to have their work permanently acquired by the University of California, Berkeley, and the Anton Brees Carillon Library for public display and use. Three runner-up prizes will be awarded, totaling $100 USD each. 
+			    </p>
+			</div>
+
+
+
+		    <div class="ui row">
+				<h2 class="ui header inverted">Prizes</h2>
+
+				    
+				<div class="ui ignored info message">
+				    <h3>Grand Prize</h3>
+					<p>
+						$700 USD and an opportunity to have their work permanently acquired by the University of California, Berkeley, and the Anton Brees Carillon Library for public display and use.
+					</p>
+				</div>
+				<div class="ui ignored info message">
+				    <h3> Honorable Mention </h3>
+				    <p> Three runner-up prizes will be awarded, totaling $100 USD each. </p>
+				</div>
+			</div>
+
+
+			<div class="ui row">
+				<h2 class="ui header inverted">Submission Details</h2>
+
+	            <p> Submitted works can be: </p>
+	            <div class="ui two cards">
+	                <div class="card">
+	                	<div class="ui content">
+		                    <div class="header">Visual Arts </div>
+	    	                <div class="meta">Painting, sculpture, photography, mixed media, etc. </div>
+	    	                <div class="description">
+		    	                <ol class="ui list"> 
+					                <li> Title </li>
+					                <li> Curriculum Vitae or Resume </li>
+					                <li> High resolution PDF/JPG/GIF/TIF of the artwork (300dpi) </li>
+					                <li> Description of work <em> (e.g., title, media, size, date) </em> </li>
+					                <li> Bio/artist statement/description of the work </li>
+					            </ol>
+				        	</div>
+	        			</div>	
+
+
+	                </div> 
+	                <div class="card">
+	                	<div class="ui content">
+							<div class="header">Performance Arts </div>
+			                <div class="meta"> Dance, interpretive dance, happenings, etc. </div>
+			                <div class="description">
+			        			<ol class="ui list"> 
+					                <li> Title </li>
+					                <li> Curriculum Vitae or Resume </li>
+					                <li> Short video of performance (.mp4, .mov, .ogg) OR description and duration of proposed piece 
+					                 </li>
+					                <li> Description of work <em> (e.g., title, media, size, date) </em> </li>
+					                <li> Bio/artist statement/description of the work </li>
+					                <li> Proposed venue (suggestions welcome) (free spaces included i.e. commons, etc.)
+					                </li>
+					            </ol>
+		            	    </div>
+	        			</div>	
+	    	        </div> 
+	                <div class="card">
+	                	<div class="ui content">
+							<div class="header">Language Arts </div>
+		                	<div class="meta"> Poetry, fiction, etc. </div>
+		                	<div class="description">
+		         				 <ol class="ui list"> 
+					                <li> Title </li>
+					                <li> Curriculum Vitae or Resume </li>
+					                <li> .PDF submission ( Submissions in other languages should include an English translation)
+					                 </li>
+					                <li> Artist Biography/Artist Statement </li>
+					            </ol>
+	             	   		</div>
+	                    </div>
+	                </div> 
+	                <div class="card">
+	                	<div class="ui content">
+							<div class="header">Audio/Video Art  </div>
+			                <div class="meta"> Remix, compositions, performance, film, etc.</div>
+			                <div class="description">
+			        			<ol class="ui list"> 
+					                <li> Title </li>
+					                <li> Curriculum Vitae or Resume </li>
+					                <li> Link to finished work (i.e. screencast/video, link to the app, website, images)
+					                <li> If a linked work, please also submit screenshots of relevant pages. </li>
+					                 </li>
+					                <li> Description of work <em> (e.g., title, media, size, date) </em> </li>
+					                <li> Biography/Artist Statement </li>
+					               
+					            </ol>
+		            	    </div>
+	        			</div>	
+	    	        </div>
+	                <div class="card">
+	                	<div class="ui content">
+							<div class="header">New Media  </div>
+			                <div class="meta"> Games, interactives, digital fabrication, visualizations, apps, website, etc. </div>
+			                <div class="description">
+			        			<ol class="ui-list"> 
+					                <li> Title </li>
+					                <li> Curriculum Vitae or Resume </li>
+					                <li> .aif, .ogg, .wav, .mp3, .mov, .mp4 (Video submissions: 720p or 1080p)
+					                 </li>
+					                <li> Description of work <em> (e.g., title, media, size, date) </em> </li>
+					                <li> Biography/Artist Statement </li>
+					                 <li> Any submission that is primarily a musical score for carillon must be accompanied by a recording of the score, played on whatever musical instrument you are comfortable using or recorded using the Sather Tower bell samples provided in our Library. </li>
+					            </ol>
+		            	    </div>
+	        			</div>	
+	    	    	</div>
+	            </div>
+			</div>
+
+
+
+			<div class="ui row">
+				<h2 class="ui header inverted"> Rules </h2>
+
+                <p> Works must be submitted by <b> 11:59 PM PST on September 1, 2014 </b>. </p>
+
+				<ul>
+
+					<li> Works should be completed within one year of September 1, 2014 </li>
+					<li> <em> Late submissions will not be accepted. </em>  </li>
+
+					<li> Submissions cannot involve physical harm or damage to the Campanile.  </li>
+
+					<li> All works submitted comply with being released under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 </a>.</li>
+
+					<li> Performances involving playing the carillon live must utilize a student or staff carillonneur from the University of California, Berkeley.  </li>
+
+				</ul>
+			</div>
+
+
+
+			<div class="ui row">
+				<h2 class="ui header inverted"> Criteria </h2>
+			
+			    <p class="segment raised"> Participants will be notified about the status of their submission November 1, 2014. </p> 
+			    <p> Specificity to the campanile (history, community, sound), Originality, &amp; Creativity</p>
+
+			    <p> We encourage applicants who will consider submission related to :</p>
+			        <ul>
+			            <li> The 2014-15 Centennial of the Campanile </li>
+			            <li> Accessibility in the tradition of the campanile providing music for public space  </li>
+			            <li> Openness in relation to open culture and licensing </li>
+			        </ul>
+			</div>
+
+
+			<div class="ui row">
+				<h2 class="ui header inverted"> How to Apply </h2>
+					<div class="ui grid two columns">
+						<div class="column">
+				        	<a class="ui button huge blue" href="/account/submission">Submit Your Work</a>
+			        	</div>
+			        
+				        <div class="column">
+					        <p> or bring/send materials to: 
+
+						        <address>
+						          <strong>Berkeley Center for New Media</strong><br>
+						          426 Sutardja Dai Hall, Mail Code: MC1758<br>
+						          University of California Berkeley, CA 94720<br>
+						        </address>
+					        </p>
+				    	</div>
+			    	</div>
+			</div>
+
+
+
+
+
+			<!-- END OF CONTEST DETAILS -->
+		</div>
+	</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+		  
